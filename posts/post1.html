@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatyzacja raportów w VBA | Blog</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="reading-progress" id="progress"></div>
+
+<nav>
+    <a href="../index.html" class="logo">FL</a>
+    <div class="menu" id="nav-menu">
+        <a href="../index.html">Strona główna</a>
+        <a href="../blog.html">Blog</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otwórz menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<header class="article-header">
+    <div class="breadcrumb">
+        <a href="../blog.html">← Blog</a>
+        <span>/ Automatyzacja</span>
+    </div>
+    <h1>Automatyzacja raportów w VBA</h1>
+    <div class="article-meta">
+        <span>📅 Styczeń 2026</span>
+        <span>⏱ 4 min czytania</span>
+        <span>🏷 Excel · VBA</span>
+    </div>
+</header>
+
+<main class="article-body">
+
+    <p>W wielu organizacjach raportowanie nadal jest procesem manualnym i czasochłonnym — mimo że większość kroków
+    można zautomatyzować narzędziami wbudowanymi w Excela. Poniżej opisuję konkretny case study z jednej z organizacji,
+    w których pracowałem.</p>
+
+    <h3>Problem</h3>
+    <p>Codzienny raport operacyjny zajmował analitykowi około 3 godzin. Dane pobierane były ręcznie z trzech systemów,
+    kopiowane do arkusza, formatowane i wysyłane e-mailem do kilkunastu odbiorców. Powtarzalność procesu była wysoka,
+    ryzyko błędu — również.</p>
+
+    <h3>Rozwiązanie</h3>
+    <p>Makro VBA automatyzujące pobieranie i przetwarzanie danych. Skrypt łączył się z bazą danych, pobierał
+    aktualne wartości, wykonywał niezbędne transformacje i generował gotowy raport — bez żadnej ingerencji użytkownika.
+    Wysyłka e-mailem była opcjonalna i też zautomatyzowana przez Outlook.</p>
+
+    <div class="result-box">
+        <p>✅ <strong>Efekt:</strong> Czas przygotowania raportu skrócony z 3 godzin do 15 minut.
+        Eliminacja błędów wynikających z ręcznego kopiowania danych.</p>
+    </div>
+
+    <h3>Kluczowe wnioski</h3>
+    <p>Automatyzacja nie wymaga zaawansowanego programowania. Już podstawowe makra w VBA — nagrywanie akcji,
+    pętle i operacje na plikach — potrafią wyeliminować dziesiątki godzin powtarzalnej pracy miesięcznie.
+    Kluczem jest dokładne zmapowanie procesu przed napisaniem pierwszej linii kodu.</p>
+
+</main>
+
+<footer>
+    © 2026 Filip Łodyga
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Wróć na górę">↑</a>
+
+<script>
+    // Reading progress bar
+    const progress = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = (window.scrollY / total * 100) + '%';
+    });
+
+    // Back to top
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => backBtn.classList.toggle('visible', window.scrollY > 300));
+
+    // Mobile nav
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+</script>
+
+</body>
+</html>

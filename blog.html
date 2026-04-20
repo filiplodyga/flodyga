@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Filip Łodyga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">FL</a>
+    <div class="menu" id="nav-menu">
+        <a href="index.html">Strona główna</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="index.html#contact">Kontakt</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otwórz menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<header class="hero" style="padding: 56px 40px 52px;">
+    <div class="hero-content">
+        <p class="subtitle">Wiedza w praktyce</p>
+        <h1>Artykuły</h1>
+        <p class="hero-desc">Finanse, automatyzacja i dane — praktyczne case studies z codziennej pracy.</p>
+    </div>
+</header>
+
+<section>
+    <div class="blog-list">
+
+        <div class="post-card fade-in">
+            <div class="post-card-body">
+                <div class="post-meta">
+                    <span>📅 Styczeń 2026</span>
+                    <span>⏱ 4 min czytania</span>
+                </div>
+                <h3>Automatyzacja raportów w VBA</h3>
+                <p>Jak skrócić czas raportowania o 80% dzięki prostym makrom — praktyczne podejście krok po kroku.</p>
+                <a href="posts/post1.html" class="read-more">Czytaj artykuł</a>
+            </div>
+        </div>
+
+        <div class="post-card fade-in">
+            <div class="post-card-body">
+                <div class="post-meta">
+                    <span>📅 Luty 2026</span>
+                    <span>⏱ 5 min czytania</span>
+                </div>
+                <h3>Power Query w praktyce</h3>
+                <p>Jak uporządkować dane z różnych źródeł w kilka minut, bez pisania kodu.</p>
+                <a href="posts/post2.html" class="read-more">Czytaj artykuł</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Filip Łodyga
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Wróć na górę">↑</a>
+
+<script>
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+    menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => menu.classList.remove('open')));
+
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => backBtn.classList.toggle('visible', window.scrollY > 300));
+
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach((e, i) => {
+            if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 100); obs.unobserve(e.target); }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filip Łodyga | Finance & Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">FL</a>
+    <div class="menu" id="nav-menu">
+        <a href="#about">O mnie</a>
+        <a href="#value">Co wnoszę</a>
+        <a href="#skills">Kompetencje</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otwórz menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <p class="subtitle">Financial Controller · Data · Automation</p>
+        <h1>Filip Łodyga</h1>
+        <p class="hero-desc">
+            Łączę finanse z technologią, upraszczając złożone procesy
+            i dostarczając konkretne insighty biznesowe.
+        </p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Skontaktuj się</a>
+            <a href="blog.html" class="btn-outline">Czytaj artykuły</a>
+        </div>
+    </div>
+</header>
+
+<section id="about">
+    <h2>O mnie</h2>
+    <div class="card fade-in">
+        <p>
+            Posiadam ponad <strong>9 lat doświadczenia w finansach</strong>, obejmującego zarówno środowiska
+            korporacyjne, jak i mniejsze organizacje. Specjalizuję się w wdrażaniu nowych rozwiązań,
+            które realnie usprawniają codzienną pracę zespołów finansowych.
+        </p>
+        <p>
+            Kontroler finansowy z silnym podejściem procesowym, kładący nacisk na automatyzację oraz mapowanie procesów
+            rachunkowo-finansowych. Dużą wagę przywiązuję do zgodności wykonywanej pracy z przepisami i regulacjami,
+            a także aktywnie wspieram procesy kontroli wewnętrznej. Przyczyniając się do standaryzacji działań oraz
+            podniesienia jakości i wiarygodności raportowania zarządczego, rozumiem rolę nowoczesnego controllingu
+            jako partnera biznesowego — nie tylko raportującego wyniki, ale też wspierającego decyzje poprzez
+            analizę danych.
+        </p>
+        <p>
+            Łączę kompetencje finansowe z analityką danych — pracuję na dużych zbiorach danych,
+            przekształcając je w użyteczne informacje dla biznesu. Pasjonat AI i automatyzacji procesów,
+            konsekwentnie stosujący zasady metodologii Lean.
+        </p>
+        <p>
+            Absolwent Uniwersytetu Ekonomicznego w Poznaniu oraz Uniwersytetu WSB Merito (Rachunkowość, Finanse,
+            Informatyka). Certyfikowany główny księgowy przez SKWP.
+        </p>
+    </div>
+</section>
+
+<section id="value">
+    <h2>Co wnoszę do organizacji</h2>
+    <div class="grid">
+        <div class="card fade-in">
+            <h3>Automatyzacja</h3>
+            <p>Eliminuję manualną pracę poprzez VBA i narzędzia BI, skracając czas procesów.</p>
+        </div>
+        <div class="card fade-in">
+            <h3>Analiza danych</h3>
+            <p>Przekształcam dane w konkretne wnioski biznesowe wspierające decyzje.</p>
+        </div>
+        <div class="card fade-in">
+            <h3>Optymalizacja</h3>
+            <p>Identyfikuję nieefektywności i wdrażam usprawnienia procesów finansowych.</p>
+        </div>
+        <div class="card fade-in">
+            <h3>Business Partnering</h3>
+            <p>Tłumaczę dane finansowe na język biznesu i wspieram podejmowanie decyzji.</p>
+        </div>
+        <div class="card fade-in">
+            <h3>Szkolenia i mentoring</h3>
+            <p>Indywidualne oraz grupowe szkolenia z zakresu MS Excel oraz controllingu.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Kompetencje</h2>
+    <div class="skills fade-in">
+        <span>Excel</span>
+        <span>VBA</span>
+        <span>SQL</span>
+        <span>Power BI</span>
+        <span>Power Query</span>
+        <span>Python</span>
+        <span>Controlling</span>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <div class="card contact fade-in">
+        <div class="contact-info">
+            <p><strong>Email:</strong> filiplodyga@gmail.com</p>
+            <p><strong>Telefon:</strong> +48 531 354 330</p>
+            <a href="https://www.linkedin.com" target="_blank" class="linkedin-btn">LinkedIn →</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Filip Łodyga
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Wróć na górę">↑</a>
+
+<script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+    });
+    // Close menu on link click
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => menu.classList.remove('open'));
+    });
+
+    // Back to top button
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        backBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.menu a[href^="#"]');
+    const scrollSpy = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(a => a.classList.remove('active'));
+                const active = document.querySelector(`.menu a[href="#${entry.target.id}"]`);
+                if (active) active.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => scrollSpy.observe(s));
+</script>
+
+</body>
+</html>
