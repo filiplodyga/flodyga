@@ -189,6 +189,39 @@
         });
     }, { rootMargin: '-40% 0px -55% 0px' });
     sections.forEach(s => scrollSpy.observe(s));
+
+    // Contact form
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const status = document.getElementById('form-status');
+    btn.disabled = true;
+    btn.textContent = 'Wysyłanie…';
+    status.className = 'form-status';
+    status.textContent = '';
+
+    try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(Object.fromEntries(new FormData(e.target)))
+        });
+        const data = await res.json();
+        if (data.success) {
+            status.textContent = '✓ Wiadomość wysłana! Odezwę się wkrótce.';
+            status.className = 'form-status success';
+            e.target.reset();
+        } else {
+            throw new Error();
+        }
+    } catch {
+        status.textContent = '✗ Coś poszło nie tak. Spróbuj jeszcze raz.';
+        status.className = 'form-status error';
+    } finally {
+        btn.disabled = false;
+        btn.textContent = 'Wyślij wiadomość';
+    }
+});
 </script>
 
 </body>
