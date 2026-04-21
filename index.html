@@ -26,7 +26,8 @@
 
 <header class="hero">
     <div class="hero-content">
-        <p class="subtitle">Financial Controller · Data · Automation</p>
+        <!-- FEATURE 3: ostatnie słowo jest animowane przez typewriter JS -->
+        <p class="subtitle">Financial Controller · Data · <span id="typed-word"></span></p>
         <h1>Filip Łodyga</h1>
         <p class="hero-desc">
             Łączę finanse z technologią, upraszczając złożone procesy
@@ -67,26 +68,64 @@
     </div>
 </section>
 
+<!-- FEATURE 2: sekcja animowanych liczników statystyk -->
+<div class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item fade-in">
+            <div class="stat-number-wrap">
+                <span class="stat-num" data-target="9">0</span>
+                <span class="stat-suffix">+</span>
+            </div>
+            <p class="stat-label">lat doświadczenia<br>w finansach</p>
+        </div>
+        <div class="stat-item fade-in">
+            <div class="stat-number-wrap">
+                <span class="stat-num" data-target="100">0</span>
+                <span class="stat-suffix">+</span>
+            </div>
+            <p class="stat-label">wdrożonych usprawnień<br>i automatyzacji</p>
+        </div>
+        <div class="stat-item fade-in">
+            <div class="stat-number-wrap">
+                <span class="stat-num" data-target="2">0</span>
+            </div>
+            <p class="stat-label">dyplomy wyższych<br>uczelni</p>
+        </div>
+        <div class="stat-item fade-in">
+            <div class="stat-number-wrap">
+                <span class="stat-num" data-target="7">0</span>
+            </div>
+            <p class="stat-label">narzędzi technicznych<br>w codziennej pracy</p>
+        </div>
+    </div>
+</div>
+
 <section id="value">
     <h2>Co wnoszę do organizacji</h2>
     <div class="grid">
-        <div class="card fade-in">
+        <!-- FEATURE 1: klasa value-card + card-icon na każdej karcie -->
+        <div class="card value-card fade-in">
+            <div class="card-icon">⚡</div>
             <h3>Automatyzacja</h3>
             <p>Eliminuję manualną pracę poprzez VBA i narzędzia BI, skracając czas procesów.</p>
         </div>
-        <div class="card fade-in">
+        <div class="card value-card fade-in">
+            <div class="card-icon">📊</div>
             <h3>Analiza danych</h3>
             <p>Przekształcam dane w konkretne wnioski biznesowe wspierające decyzje.</p>
         </div>
-        <div class="card fade-in">
+        <div class="card value-card fade-in">
+            <div class="card-icon">🎯</div>
             <h3>Optymalizacja</h3>
             <p>Identyfikuję nieefektywności i wdrażam usprawnienia procesów finansowych.</p>
         </div>
-        <div class="card fade-in">
+        <div class="card value-card fade-in">
+            <div class="card-icon">🤝</div>
             <h3>Business Partnering</h3>
             <p>Tłumaczę dane finansowe na język biznesu i wspieram podejmowanie decyzji.</p>
         </div>
-        <div class="card fade-in">
+        <div class="card value-card fade-in">
+            <div class="card-icon">🎓</div>
             <h3>Szkolenia i mentoring</h3>
             <p>Indywidualne oraz grupowe szkolenia z zakresu MS Excel oraz controllingu.</p>
         </div>
@@ -119,8 +158,6 @@
         <form id="contact-form" class="contact-form">
             <input type="hidden" name="access_key" value="4f78f796-d6fa-4b5a-a835-94e20a404b14">
             <input type="hidden" name="subject" value="Nowa wiadomość z portfolio">
-            <!-- POPRAWKA #1: botcheck jako hidden input zamiast checkbox -->
-            <!-- Dzięki temu zawsze trafia do FormData i jest wysyłany jako pusty string -->
             <input type="hidden" name="botcheck" value="">
 
             <div class="form-group">
@@ -149,36 +186,33 @@
 <a href="#" class="back-to-top" id="back-to-top" aria-label="Wróć na górę">↑</a>
 
 <script>
-    // Mobile nav toggle
+    // ─── Mobile nav toggle ───────────────────────────────────────────────
     const toggle = document.getElementById('nav-toggle');
     const menu = document.getElementById('nav-menu');
-    toggle.addEventListener('click', () => {
-        menu.classList.toggle('open');
-    });
-    // Close menu on link click
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
     menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => menu.classList.remove('open'));
     });
 
-    // Back to top button
+    // ─── Back to top ─────────────────────────────────────────────────────
     const backBtn = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
         backBtn.classList.toggle('visible', window.scrollY > 400);
     });
 
-    // Fade-in on scroll
-    const observer = new IntersectionObserver((entries) => {
+    // ─── Fade-in on scroll ───────────────────────────────────────────────
+    const fadeObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
             if (entry.isIntersecting) {
                 setTimeout(() => entry.target.classList.add('visible'), i * 80);
-                observer.unobserve(entry.target);
+                fadeObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
-    // Active nav link on scroll
+    // ─── Active nav link on scroll ───────────────────────────────────────
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.menu a[href^="#"]');
     const scrollSpy = new IntersectionObserver((entries) => {
@@ -192,7 +226,76 @@
     }, { rootMargin: '-40% 0px -55% 0px' });
     sections.forEach(s => scrollSpy.observe(s));
 
-    // Contact form
+    // ─── FEATURE 3: Typewriter effect ────────────────────────────────────
+    const words = ['Automation', 'Analytics', 'Insights', 'AI'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingPaused = false;
+    const typedEl = document.getElementById('typed-word');
+
+    function type() {
+        if (typingPaused) return;
+        const current = words[wordIndex];
+
+        if (isDeleting) {
+            typedEl.textContent = current.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedEl.textContent = current.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === current.length) {
+            typingPaused = true;
+            setTimeout(() => { isDeleting = true; typingPaused = false; type(); }, 2200);
+            return;
+        }
+
+        if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+
+        setTimeout(type, isDeleting ? 70 : 115);
+    }
+
+    setTimeout(type, 900);
+
+    // ─── FEATURE 2: Animated counter ─────────────────────────────────────
+    const counters = document.querySelectorAll('.stat-num');
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const target = parseInt(el.dataset.target, 10);
+            const duration = 1600;
+            const startTime = performance.now();
+
+            function easeOutQuart(t) {
+                return 1 - Math.pow(1 - t, 4);
+            }
+
+            function updateCount(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                el.textContent = Math.floor(easeOutQuart(progress) * target);
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
+                } else {
+                    el.textContent = target;
+                }
+            }
+
+            requestAnimationFrame(updateCount);
+            counterObserver.unobserve(el);
+        });
+    }, { threshold: 0.6 });
+
+    counters.forEach(c => counterObserver.observe(c));
+
+    // ─── Contact form ─────────────────────────────────────────────────────
     document.getElementById('contact-form').addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = document.getElementById('submit-btn');
@@ -203,10 +306,7 @@
         status.textContent = '';
 
         try {
-            // POPRAWKA #1: budujemy obiekt z FormData — botcheck jest teraz polem hidden,
-            // więc zawsze trafia do payload jako pusty string (wymagane przez Web3Forms)
-            const formData = new FormData(e.target);
-            const payload = Object.fromEntries(formData);
+            const payload = Object.fromEntries(new FormData(e.target));
 
             const res = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
@@ -221,13 +321,10 @@
                 status.className = 'form-status success';
                 e.target.reset();
             } else {
-                // POPRAWKA #2: pokazujemy konkretny błąd zwrócony przez Web3Forms API
-                // Ułatwia diagnozowanie problemów (np. niezweryfikowany e-mail, zły klucz)
                 throw new Error(data.message || 'Nieznany błąd API');
             }
         } catch (err) {
-            // POPRAWKA #2: wyświetlamy treść błędu zamiast ogólnego komunikatu
-            status.textContent = `✗ Błąd: ${err.message}. Spróbuj jeszcze raz lub napisz bezpośrednio na filiplodyga@gmail.com`;
+            status.textContent = `✗ Błąd: ${err.message}. Spróbuj jeszcze raz lub napisz na filiplodyga@gmail.com`;
             status.className = 'form-status error';
             console.error('Web3Forms error:', err);
         } finally {
