@@ -119,7 +119,9 @@
         <form id="contact-form" class="contact-form">
             <input type="hidden" name="access_key" value="4f78f796-d6fa-4b5a-a835-94e20a404b14">
             <input type="hidden" name="subject" value="Nowa wiadomość z portfolio">
-            <input type="checkbox" name="botcheck" style="display:none">
+            <!-- POPRAWKA #1: botcheck jako hidden input zamiast checkbox -->
+            <!-- Dzięki temu zawsze trafia do FormData i jest wysyłany jako pusty string -->
+            <input type="hidden" name="botcheck" value="">
 
             <div class="form-group">
                 <label for="name">Imię i nazwisko</label>
@@ -191,37 +193,48 @@
     sections.forEach(s => scrollSpy.observe(s));
 
     // Contact form
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    const status = document.getElementById('form-status');
-    btn.disabled = true;
-    btn.textContent = 'Wysyłanie…';
-    status.className = 'form-status';
-    status.textContent = '';
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('submit-btn');
+        const status = document.getElementById('form-status');
+        btn.disabled = true;
+        btn.textContent = 'Wysyłanie…';
+        status.className = 'form-status';
+        status.textContent = '';
 
-    try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(Object.fromEntries(new FormData(e.target)))
-        });
-        const data = await res.json();
-        if (data.success) {
-            status.textContent = '✓ Wiadomość wysłana! Odezwę się wkrótce.';
-            status.className = 'form-status success';
-            e.target.reset();
-        } else {
-            throw new Error();
+        try {
+            // POPRAWKA #1: budujemy obiekt z FormData — botcheck jest teraz polem hidden,
+            // więc zawsze trafia do payload jako pusty string (wymagane przez Web3Forms)
+            const formData = new FormData(e.target);
+            const payload = Object.fromEntries(formData);
+
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                status.textContent = '✓ Wiadomość wysłana! Odezwę się wkrótce.';
+                status.className = 'form-status success';
+                e.target.reset();
+            } else {
+                // POPRAWKA #2: pokazujemy konkretny błąd zwrócony przez Web3Forms API
+                // Ułatwia diagnozowanie problemów (np. niezweryfikowany e-mail, zły klucz)
+                throw new Error(data.message || 'Nieznany błąd API');
+            }
+        } catch (err) {
+            // POPRAWKA #2: wyświetlamy treść błędu zamiast ogólnego komunikatu
+            status.textContent = `✗ Błąd: ${err.message}. Spróbuj jeszcze raz lub napisz bezpośrednio na filiplodyga@gmail.com`;
+            status.className = 'form-status error';
+            console.error('Web3Forms error:', err);
+        } finally {
+            btn.disabled = false;
+            btn.textContent = 'Wyślij wiadomość';
         }
-    } catch {
-        status.textContent = '✗ Coś poszło nie tak. Spróbuj jeszcze raz.';
-        status.className = 'form-status error';
-    } finally {
-        btn.disabled = false;
-        btn.textContent = 'Wyślij wiadomość';
-    }
-});
+    });
 </script>
 
 </body>
