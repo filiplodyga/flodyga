@@ -168,6 +168,25 @@ nav {
     font-size: 13px;
 }
 
+/* =========================
+   FEATURE 3: TYPEWRITER CURSOR
+========================= */
+#typed-word {
+    color: #a5b4fc;
+}
+
+#typed-word::after {
+    content: '|';
+    color: var(--indigo);
+    animation: blink-cursor 0.75s step-end infinite;
+    font-weight: 300;
+}
+
+@keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
 .hero-desc {
     margin: 0 0 32px;
     max-width: 580px;
@@ -303,6 +322,130 @@ h3 {
 #about .card {
     font-size: 15.5px;
     line-height: 1.75;
+}
+
+/* =========================
+   FEATURE 2: STATS SECTION
+========================= */
+.stats-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+    max-width: 100%;
+    padding: 52px 24px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+
+.stats-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 28px 20px;
+    border-right: 1px solid rgba(255,255,255,0.07);
+    position: relative;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1px;
+    margin-bottom: 10px;
+}
+
+.stat-num {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: white;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.stat-suffix {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--indigo);
+    line-height: 1;
+    margin-top: 6px;
+}
+
+.stat-label {
+    color: #9ca3af;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.55;
+    letter-spacing: 0.1px;
+}
+
+/* =========================
+   FEATURE 1: VALUE CARDS — SCALE + ICONS
+========================= */
+.value-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(99,102,241,0.04), transparent);
+    opacity: 0;
+    transition: var(--transition);
+    border-radius: inherit;
+}
+
+.value-card:hover::before {
+    opacity: 1;
+}
+
+#value .card:hover {
+    transform: translateY(-4px) scale(1.035);
+    box-shadow: 0 20px 44px rgba(99,102,241,0.14);
+    border-color: rgba(99,102,241,0.28);
+}
+
+.card-icon {
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    margin-bottom: 14px;
+    transition: var(--transition);
+    border: 1px solid rgba(99,102,241,0.12);
+}
+
+.value-card:hover .card-icon {
+    background: linear-gradient(135deg, var(--indigo), var(--indigo-dark));
+    border-color: transparent;
+    transform: scale(1.08) rotate(-3deg);
 }
 
 /* =========================
@@ -686,6 +829,19 @@ footer {
         bottom: 20px;
         right: 20px;
     }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat-item:nth-child(1),
+    .stat-item:nth-child(2) {
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
 }
 
 /* =========================
@@ -708,8 +864,19 @@ footer {
     .grid {
         grid-template-columns: 1fr;
     }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-num {
+        font-size: 40px;
+    }
 }
-/* CONTACT FORM */
+
+/* =========================
+   CONTACT FORM
+========================= */
 .contact-card {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
