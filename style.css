@@ -327,7 +327,7 @@ nav {
 }
 
 /* Typewriter cursor */
-#typed-word { color: rgba(255,255,255,0.75); }
+#typed-word { color: rgba(201, 168, 76, 0.35); }
 #typed-word::after {
     content: '|';
     color: var(--gold);
