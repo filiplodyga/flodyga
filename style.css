@@ -265,6 +265,8 @@ nav {
     background: rgba(201,168,76,0.08);
     backdrop-filter: blur(8px);
     animation: badge-in 0.8s var(--ease-out) both;
+    white-space: nowrap; /* <-- Ta linijka blokuje łamanie tekstu na dwa wiersze */
+}
 }
 .subtitle::before {
     content: '';
@@ -327,7 +329,7 @@ nav {
 }
 
 /* Typewriter cursor */
-#typed-word { color: rgba(201, 168, 76, 0.35); }
+#typed-word { color: var(--gold); }
 #typed-word::after {
     content: '|';
     color: var(--gold);
