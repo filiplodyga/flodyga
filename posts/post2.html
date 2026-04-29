@@ -7,34 +7,79 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav>
-        <a href="../index.html" class="logo">FILIP ŁODYGA</a>
-        <div class="menu">
-            <a href="../index.html">Strona główna</a>
-            <a href="../blog.html">Blog</a>
-        </div>
-    </nav>
-    <section class="fade-in">
-        <h1>Power Query w praktyce</h1>
-        <p style="margin: 20px 0; color: var(--muted);">📅 Luty 2026 · ⏱ 5 min czytania</p>
-        <div class="content">
-            <p>Power Query to potężne narzędzie do transformacji danych bez pisania kodu...</p>
-        </div>
-        
-        <div class="download-box">
-            <div>
-                <h3>Pobierz materiały</h3>
-                <p>Arkusz pomocniczy do tego artykułu.</p>
-            </div>
-            <a href="../zalacznik.txt" class="download-btn" download>Pobierz załącznik (.txt)</a>
-        </div>
-    </section>
-    
-    <script>
-        const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-        });
-        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-    </script>
+
+<div class="reading-progress" id="progress"></div>
+
+<nav>
+    <a href="../index.html" class="logo">FL</a>
+    <div class="menu" id="nav-menu">
+        <a href="../index.html">Strona główna</a>
+        <a href="../blog.html">Blog</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otwórz menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<header class="article-header">
+    <div class="breadcrumb">
+        <a href="../blog.html">← Blog</a>
+        <span>/ Power Query</span>
+    </div>
+    <h1>Power Query w praktyce</h1>
+    <div class="article-meta">
+        <span>📅 Luty 2026</span>
+        <span>⏱ 5 min czytania</span>
+        <span>🏷 Excel · Power Query</span>
+    </div>
+</header>
+
+<main class="article-body">
+
+    <p>Power Query to jeden z najpotężniejszych, a zarazem niedocenianych narzędzi wbudowanych w Excel i Power BI.
+    Pozwala łączyć, czyścić i przekształcać dane z wielu źródeł — bez pisania kodu i bez angażowania działu IT.</p>
+
+    <h3>Problem</h3>
+    <p>Dane spływały z kilku systemów: ERP, CRM i arkuszy zewnętrznych dostawców — każde w innym formacie,
+    z innymi nagłówkami i kodowaniami. Comiesięczne zestawienie wymagało pracy kilku osób przez cały dzień.</p>
+
+    <h3>Rozwiązanie</h3>
+    <p>Automatyczne łączenie i transformacja danych za pomocą Power Query. Jeden raz skonfigurowane zapytania
+    pobierają dane z każdego źródła, ujednolicają strukturę i ładują gotowy wynik do modelu danych.
+    Aktualizacja zajmuje jedno kliknięcie — „Odśwież wszystko".</p>
+
+    <div class="result-box">
+        <p>✅ <strong>Efekt:</strong> Spójne, gotowe raporty w kilka minut. Miesięczna praca
+        skrócona z całego dnia roboczego do poniżej 30 minut.</p>
+    </div>
+
+    <h3>Dlaczego warto</h3>
+    <p>Power Query działa bez makr i bez programowania — interfejs graficzny prowadzi użytkownika
+    przez każdy krok transformacji. Co ważne, wszystkie kroki są rejestrowane i powtarzalne,
+    co eliminuje błędy i ułatwia przekazanie procesu innej osobie.</p>
+
+</main>
+
+<footer>
+    © 2026 Filip Łodyga
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Wróć na górę">↑</a>
+
+<script>
+    const progress = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = (window.scrollY / total * 100) + '%';
+    });
+
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => backBtn.classList.toggle('visible', window.scrollY > 300));
+
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+</script>
+
 </body>
 </html>
