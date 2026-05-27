@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" stroke="#D8D2C4" stroke-opacity=".42"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#F7F4EE"/>
+  <path d="M0 0h1200v630H0z" fill="url(#grid)"/>
+  <rect x="90" y="82" width="1020" height="466" rx="42" fill="#FFFDF8" stroke="#D8D2C4"/>
+  <text x="130" y="174" font-family="Georgia, serif" font-size="66" font-weight="700" fill="#0B1F3A">Filip Łodyga</text>
+  <text x="132" y="228" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#B08D57">Kontroler finansowy · controlling · automatyzacja raportowania</text>
+  <text x="132" y="328" font-family="Georgia, serif" font-size="50" font-weight="700" fill="#0B1F3A">Controlling na godziny</text>
+  <text x="132" y="390" font-family="Georgia, serif" font-size="50" font-weight="700" fill="#0B1F3A">Excel, dashboardy i raportowanie zarządcze</text>
+  <text x="132" y="484" font-family="Arial, sans-serif" font-size="25" fill="#667085">Poznań · Grodzisk Wielkopolski · Wielkopolska · zdalnie</text>
+</svg>

@@ -1,431 +1,554 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/png" href="/favicon.png">
-
-    <link rel="apple-touch-icon" href="/favicon.png">
-
-    <!-- SEO: tytuł strony -->
-    <title>Filip Łodyga | Kontroler Finansowy · Controlling · Excel</title>
-
-    <!-- SEO: meta description — widoczny w wynikach Google -->
-    <meta name="description" content="Filip Łodyga – kontroler finansowy. Controlling na godziny dla MŚP, automatyzacja finansów, narzędzia Excel na wymiar i szkolenia.">
-
-    <!-- SEO: słowa kluczowe -->
-    <meta name="keywords" content="kontroler finansowy, controlling, controlling na godziny, automatyzacja procesów finansowych, Excel na zamówienie, narzędzia Excel, Power BI, analiza danych, Grodzisk Wielkopolski, Nowy Tomyśl, Wolsztyn, Kościan, Poznań, Wielkopolska, MŚP, szkolenia Excel, VBA">
-
-    <!-- SEO: autor -->
-    <meta name="author" content="Filip Łodyga">
-    <meta name="robots" content="index, follow">
-
-    <!-- SEO: Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Filip Łodyga | Kontroler Finansowyh">
-    <meta property="og:description" content="Controlling na godziny dla MŚP, automatyzacja finansów i narzędzia Excel na wymiar.">
-    <meta property="og:locale" content="pl_PL">
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- SEO: dane strukturalne JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Filip Łodyga",
-        "jobTitle": "Kontroler Finansowy",
-        "description": "Doświadczony kontroler finansowy specjalizujący się w automatyzacji procesów finansowych, analizie danych.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Grodzisk Wielkopolski",
-            "addressRegion": "Wielkopolska",
-            "addressCountry": "PL"
-        },
-        "areaServed": ["Grodzisk Wielkopolski","Nowy Tomyśl","Wolsztyn","Kościan","Poznań","Wielkopolska"],
-        "knowsAbout": ["Controlling","Excel","VBA","Power BI","SQL","Python","Analiza danych","Automatyzacja procesów"]
-    }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontroler finansowy Poznań | Controlling, Excel, dashboardy - Filip Łodyga</title>
+  <meta name="description" content="Kontroler finansowy i specjalista controllingu. Pomagam firmom z Poznania, Grodziska Wielkopolskiego i Wielkopolski w raportowaniu zarządczym, automatyzacji Excel, analizie kosztów i usprawnianiu procesów finansowych." />
+  <meta name="keywords" content="kontroler finansowy Poznań, controlling Poznań, controlling na godziny, raportowanie zarządcze, automatyzacja Excel, dashboardy Excel, Excel VBA Poznań, Power Query, Grodzisk Wielkopolski, Wielkopolska" />
+  <link rel="canonical" href="https://flodyga.pl/" />
+  <meta property="og:title" content="Filip Łodyga | Kontroler finansowy, controlling i automatyzacja raportowania" />
+  <meta property="og:description" content="Raportowanie zarządcze, controlling na godziny, Excel, dashboardy i automatyzacja finansów dla firm z Poznania, Grodziska Wielkopolskiego i Wielkopolski." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flodyga.pl/" />
+  <meta property="og:image" content="assets/og-image.svg" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Filip Łodyga - kontroler finansowy",
+    "url": "https://flodyga.pl/",
+    "image": "https://flodyga.pl/assets/og-image.svg",
+    "email": "filiplodyga@gmail.com",
+    "telephone": "+48531354330",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Grodzisk Wielkopolski",
+      "addressRegion": "Wielkopolskie",
+      "addressCountry": "PL"
+    },
+    "areaServed": [
+      "Poznań",
+      "Grodzisk Wielkopolski",
+      "Wielkopolska",
+      "Rakoniewice",
+      "Wielichowo",
+      "Granowo",
+      "Kamieniec",
+      "Nowy Tomyśl",
+      "Opalenica",
+      "Kościan",
+      "Wolsztyn",
+      "Buk",
+      "Stęszew",
+      "Dopiewo",
+      "Komorniki",
+      "Tarnowo Podgórne",
+      "Luboń",
+      "Swarzędz",
+      "Mosina",
+      "Kórnik"
+    ],
+    "serviceType": [
+      "Controlling finansowy",
+      "Raportowanie zarządcze",
+      "Automatyzacja Excel",
+      "Power Query",
+      "Analiza kosztów i marży",
+      "R2R i IC reconciliation"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Filip Łodyga",
+      "jobTitle": "Kontroler finansowy"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/filip-lodyga/"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Czy oferuję controlling na godziny?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Mogę wesprzeć firmę projektowo, godzinowo lub cyklicznie w raportowaniu zarządczym, analizie kosztów, budżetowaniu, forecastach i automatyzacji procesów finansowych."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy mogę zacząć od audytu obecnego raportu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Dobrym pierwszym krokiem jest przegląd obecnego pliku, źródeł danych, logiki raportu, ręcznych czynności i miejsc, w których najczęściej pojawiają się błędy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy tworzę dashboardy i automatyzacje Excel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Wspieram firmy w budowie dashboardów, modeli danych, automatyzacji Excel, VBA, Power Query oraz kontroli jakości danych."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-
-<nav>
-    <a href="index.html" class="logo">Filip Łodyga - Kontroler Finansowy</a>
-    <div class="menu" id="nav-menu">
-        <a href="#about">O mnie</a>
-        <a href="#value">Co wnoszę</a>
-        <a href="#skills">Kompetencje</a>
-        <a href="blog.html">Blog</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Strona główna Filip Łodyga">
+        <img src="assets/favicon.ico" alt="" class="brand-logo" />
+        <span>Filip Łodyga</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <nav class="nav-links" id="navLinks" aria-label="Główne menu">
+        <a href="#audience">Dla kogo</a>
+        <a href="#services">Usługi</a>
+        <a href="#offer">Współpraca</a>
+        <a href="#approach">Podejście</a>
+        <a href="#cases">Projekty</a>
         <a href="#contact">Kontakt</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="mailto:filiplodyga@gmail.com">Skontaktuj się</a>
     </div>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Otwórz menu">
-        <span></span><span></span><span></span>
-    </button>
-</nav>
+  </header>
 
-<header class="hero">
-    <div class="hero-content">
-        <p class="subtitle">Controlling · Data · <span id="typed-word"></span></p>
-        <h1>Filip Łodyga</h1>
-        <p class="hero-desc">
-            Łączę finanse z technologią, upraszczając złożone procesy
-            i dostarczając konkretne insighty biznesowe.
-        </p>
-        <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Skontaktuj się</a>
-            <a href="blog.html" class="btn-outline">Czytaj artykuły</a>
-        </div>
-    </div>
-</header>
-
-<!-- SEO: semantyczny article wewnątrz section -->
-<section id="about" aria-label="O mnie">
-    <h2>O mnie</h2>
-    <article class="card fade-in">
-
-        <!-- Akapit 1: intro + lokalizacja -->
-        <!-- Akapit 2: usługi -->
-        <p>
-            Specjalizuje się we wdrażaniu rozwiązań usprawniających pracę działów finansowych.
-            Oferuje m.in. <strong>controlling na godziny</strong> — elastyczne wsparcie finansowe dla
-            <strong>MŚP</strong> bez konieczności zatrudniania pełnoetatowego specjalisty,
-            obejmujące analizy finansowe, budżetowanie i raportowanie zarządcze — oraz projektuje
-            <strong>dedykowane narzędzia i arkusze Excel na zamówienie</strong>,
-            dopasowane do specyfiki konkretnej organizacji.
-        </p>
-
-        <!-- Akapit 3: narzędzia i automatyzacja -->
-        <p>
-            Łączy kompetencje <strong>controllera finansowego</strong> z zaawansowaną
-            <strong>analityką danych</strong>. Na co dzień pracuje z <strong>Excel</strong>,
-            <strong>VBA</strong>, <strong>SQL</strong>, <strong>Power BI</strong>,
-            <strong>Power Query</strong> oraz <strong>Python</strong>, przekształcając surowe dane
-            w informacje wspierające trafne decyzje zarządcze. Pasjonat
-            <strong>automatyzacji procesów finansowych</strong> i metodologii Lean.
-        </p>
-
-        <!-- Akapit 4: wykształcenie -->
-        <p>
-            Absolwent <strong>Uniwersytetu Ekonomicznego w Poznaniu</strong> oraz
-            <strong>Uniwersytetu WSB Merito</strong> (Rachunkowość, Finanse, Informatyka).
-            <strong>Certyfikowany główny księgowy SKWP</strong>. Łączy solidne podstawy
-            akademickie z praktycznym podejściem do finansów i technologii.
-
-    </article>
-</section>
-
-<!-- Animowane liczniki -->
-<div class="stats-section">
-    <div class="stats-grid">
-        <div class="stat-item fade-in">
-            <div class="stat-number-wrap">
-                <span class="stat-num" data-target="9">0</span>
-                <span class="stat-suffix">+</span>
-            </div>
-            <p class="stat-label">lat doświadczenia<br>w finansach</p>
-        </div>
-        <div class="stat-item fade-in">
-            <div class="stat-number-wrap">
-                <span class="stat-num" data-target="50">0</span>
-                <span class="stat-suffix">+</span>
-            </div>
-            <p class="stat-label">wdrożonych usprawnień<br>i automatyzacji</p>
-        </div>
-        <div class="stat-item fade-in">
-            <div class="stat-number-wrap">
-                <span class="stat-num" data-target="2">0</span>
-            </div>
-            <p class="stat-label">dyplomy wyższych<br>uczelni</p>
-        </div>
-        <div class="stat-item fade-in">
-            <div class="stat-number-wrap">
-                <span class="stat-num" data-target="10">0</span>
-                <span class="stat-suffix">+</span>
-            </div>
-            <p class="stat-label">technologii<br>w codziennej pracy</p>
-        </div>
-    </div>
-</div>
-
-<!-- Karuzela "Co wnoszę" -->
-<section id="value" aria-label="Co wnoszę do organizacji">
-    <h2>Co wnoszę do organizacji</h2>
-
-    <div class="value-carousel" role="region" aria-label="Usługi — przewijaj strzałkami">
-        <button class="carousel-btn" id="carousel-prev" aria-label="Poprzedni">&#8592;</button>
-
-        <div class="carousel-viewport">
-            <div class="carousel-track" id="carousel-track">
-
-                <div class="card value-card fade-in">
-                    <div class="card-icon">⚡</div>
-                    <h3>Automatyzacja</h3>
-                    <p>Eliminuję manualną pracę poprzez VBA i narzędzia BI, skracając czas procesów finansowych nawet o kilkadziesiąt procent.</p>
-                </div>
-
-                <div class="card value-card fade-in">
-                    <div class="card-icon">📊</div>
-                    <h3>Analiza danych</h3>
-                    <p>Przekształcam surowe dane w konkretne wnioski biznesowe, które realnie wspierają decyzje zarządcze.</p>
-                </div>
-
-                <div class="card value-card fade-in">
-                    <div class="card-icon">🎯</div>
-                    <h3>Optymalizacja</h3>
-                    <p>Identyfikuję nieefektywności procesowe i wdrażam trwałe usprawnienia w działach finansowych i księgowości.</p>
-                </div>
-
-                <div class="card value-card fade-in">
-                    <div class="card-icon">🤝</div>
-                    <h3>Business Partnering</h3>
-                    <p>Tłumaczę dane finansowe na język biznesu i działam jako partner wspierający podejmowanie trafnych decyzji.</p>
-                </div>
-
-                <div class="card value-card fade-in">
-                    <div class="card-icon">⏱️</div>
-                    <h3>Controlling na godziny</h3>
-                    <p>Elastyczne wsparcie controllingu dla <strong>MŚP</strong> bez etatu. Analizy, budżetowanie i raporty zarządcze wtedy, kiedy ich potrzebujesz.</p>
-                </div>
-
-                <div class="card value-card fade-in">
-                    <div class="card-icon">📐</div>
-                    <h3>Narzędzia Excel na wymiar</h3>
-                    <p>Projektuję zaawansowane arkusze, kalkulatory i dashboardy w Excelu — skrojone pod specyfikę Twojej firmy.</p>
-                </div>
-
-                <div class="card value-card fade-in">
-                    <div class="card-icon">🎓</div>
-                    <h3>Szkolenia</h3>
-                    <p>Indywidualne i grupowe szkolenia z MS Excel oraz controllingu — praktyczne, bez zbędnej teorii.</p>
-                </div>
-
-            </div>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow typing-line">Controlling & <span id="typed-word" aria-live="polite">Excel VBA</span></div>
+          <h1>Controlling, który daje decyzje. Automatyzacja, która oszczędza czas.</h1>
+          <p class="lead">Pomagam firmom porządkować raportowanie zarządcze, automatyzować Excel oraz szybciej rozumieć koszty, marżę, cash flow i KPI.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Porozmawiajmy o Twoim raporcie</a>
+            <a class="btn btn-secondary" href="#audience">Dla rekrutera i dla firmy</a>
+          </div>
+          <div class="chips" aria-label="Specjalizacje">
+            <span class="chip">Controlling finansowy</span>
+            <span class="chip">Raportowanie zarządcze</span>
+            <span class="chip">Excel / VBA</span>
+            <span class="chip">Power Query</span>
+            <span class="chip">Dashboardy</span>
+            <span class="chip">R2R</span>
+            <span class="chip">SQL</span>
+          </div>
         </div>
 
-        <button class="carousel-btn" id="carousel-next" aria-label="Następny">&#8594;</button>
-    </div>
+        <div class="hero-visual reveal">
+          <div class="orb one"></div>
+          <div class="orb two"></div>
+          <img src="assets/hero-dashboard.svg" alt="Mockup dashboardu finansowego" class="hero-image" />
+        </div>
+      </div>
+    </section>
 
-    <div class="carousel-dots" id="carousel-dots"></div>
-</section>
-
-<section id="skills" aria-label="Kompetencje techniczne">
-    <h2>Kompetencje</h2>
-    <div class="skills fade-in">
-        <span>Excel</span>
-        <span>VBA</span>
-        <span>SQL</span>
-        <span>Power BI</span>
-        <span>Power Query</span>
-        <span>Python</span>
-        <span>Controlling</span>
-    </div>
-</section>
-
-<section id="contact" aria-label="Kontakt">
-    <h2>Kontakt</h2>
-    <div class="card contact-card fade-in">
-
-        <div class="contact-info">
-            <address>
-                <p><strong>Email:</strong> <a href="mailto:filiplodyga@gmail.com">filiplodyga@gmail.com</a></p>
-                <p><strong>Telefon:</strong> <a href="tel:+48531354330">+48 531 354 330</a></p>
-                <p><strong>Lokalizacja:</strong> Grodzisk Wielkopolski</p>
-            </address>
-            <a href="https://www.linkedin.com/in/filip-lodyga/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">LinkedIn →</a>
+    <section id="audience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Dwie ścieżki</div>
+            <h2>Profil zawodowy i zakres wsparcia finansowego w jednym miejscu.</h2>
+          </div>
+          <p class="section-desc">Łączę perspektywę controllingu, raportowania i praktycznej automatyzacji. Dlatego mogę być zarówno kandydatem do roli finansowej, jak i partnerem przy konkretnym projekcie.</p>
         </div>
 
-        <form id="contact-form" class="contact-form">
-            <input type="hidden" name="access_key" value="4f78f796-d6fa-4b5a-a835-94e20a404b14">
-            <input type="hidden" name="subject" value="Nowa wiadomość z portfolio">
-            <input type="hidden" name="botcheck" value="">
+        <div class="audience-grid">
+          <article class="audience-card reveal">
+            <div class="section-kicker">Dla rekrutera</div>
+            <h3>Financial controlling, R2R i praca z biznesem</h3>
+            <p>Profil zawodowy oparty na controllingu, księgowości, R2R, analizie odchyleń, raportowaniu KPI i usprawnianiu procesów finansowych.</p>
+            <ul>
+              <li>doświadczenie w finansach, GL/R2R i controllingu,</li>
+              <li>praktyczna znajomość Excel, VBA, Power Query, SQL i analizy danych,</li>
+              <li>nastawienie na business partnering, jakość danych i odpowiedzialność za proces.</li>
+            </ul>
+            <a class="text-link" href="#about">Zobacz profil zawodowy</a>
+          </article>
 
-            <div class="form-group">
-                <label for="name">Imię i nazwisko</label>
-                <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+          <article class="audience-card reveal">
+            <div class="section-kicker">Dla firmy</div>
+            <h3>Controlling na godziny i automatyzacja raportowania</h3>
+            <p>Wsparcie projektowe dla MŚP, właścicieli firm, CFO, działów finansowych i managerów, którzy chcą ograniczyć ręczną pracę w raportach.</p>
+            <ul>
+              <li>audyt obecnego raportu, pliku lub procesu,</li>
+              <li>dashboard, model Excel lub automatyzacja Power Query/VBA,</li>
+              <li>cykliczne wsparcie przy KPI, kosztach, marży, budżecie i forecastach.</li>
+            </ul>
+            <a class="text-link" href="#contact">Opisz proces do usprawnienia</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">W czym mogę pomóc</div>
+            <h2>Controlling finansowy, raportowanie zarządcze i automatyzacja danych.</h2>
+          </div>
+          <p class="section-desc">Największą wartość wnoszę tam, gdzie finanse, operacje i dane spotykają się w praktyce: w raportach miesięcznych, budżetach, Excelu, dashboardach i procesach zamknięcia.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="icon">01</div>
+            <h3>Raportowanie zarządcze i controlling</h3>
+            <p>Raporty miesięczne, analiza kosztów, przychodów i marż, budżet vs actual, KPI finansowe i komentarze do business review.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">02</div>
+            <h3>Automatyzacja Excel, VBA i Power Query</h3>
+            <p>Automatyczne raporty, importy, walidacje, czyszczenie danych, makra i przebudowa arkuszy, które dziś wymagają ręcznego kopiowania.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">03</div>
+            <h3>Dashboardy i raporty finansowe</h3>
+            <p>Modele danych, dashboardy KPI, widoki dla zarządu i managerów oraz raporty sprzedaży, kosztów, rentowności i cash flow.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">04</div>
+            <h3>Budżetowanie, forecast i analiza odchyleń</h3>
+            <p>Wsparcie przy planowaniu, kontroli wykonania, analizie różnic, scenariuszach i prezentacji wniosków dla właściciela lub managementu.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">05</div>
+            <h3>R2R, uzgodnienia i IC reconciliation</h3>
+            <p>Checklisty zamknięcia miesiąca, uzgodnienia sald, kontrole danych, trackery statusów i automatyzacja plików kontrolnych.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Kiedy warto porozmawiać</div>
+            <h2>Jeśli raportowanie działa, ale kosztuje zbyt dużo czasu i uwagi.</h2>
+          </div>
+        </div>
+        <div class="cards">
+          <article class="card reveal"><h3>Raporty zajmują za dużo czasu</h3><p>Automatyzuję cykliczne raporty, żeby miesięczne zamknięcie nie oznaczało ręcznego kopiowania danych między plikami.</p></article>
+          <article class="card reveal"><h3>Dane są rozproszone</h3><p>Łączę eksporty z systemów, pliki Excel i ręczne źródła w jeden model danych, który można odświeżać i kontrolować.</p></article>
+          <article class="card reveal"><h3>Brakuje kontroli nad wynikiem</h3><p>Buduję raporty pokazujące koszty, marżę, cash flow, KPI i odchylenia w formie przydatnej do decyzji biznesowych.</p></article>
+          <article class="card reveal"><h3>Proces jest zależny od jednej osoby</h3><p>Dokumentuję logikę, upraszczam arkusze i tworzę rozwiązania, które mogą przejąć inni członkowie zespołu.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" class="section section-alt">
+      <div class="container two-col">
+        <div class="quote-box reveal">
+          <div>
+            <div class="section-kicker">Jak pracuję</div>
+            <h3>Pracuję od problemu biznesowego, nie od narzędzia.</h3>
+          </div>
+          <div class="approach-framework" aria-label="Framework pracy">
+            <div class="framework-row">
+              <span>01</span>
+              <strong>Diagnoza</strong>
+              <small>proces i problem</small>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="jan@firma.pl">
+            <div class="framework-row">
+              <span>02</span>
+              <strong>Model danych</strong>
+              <small>logika i kontrola</small>
             </div>
-            <div class="form-group">
-                <label for="message">Wiadomość</label>
-                <textarea id="message" name="message" rows="4" required placeholder="W czym mogę pomóc?"></textarea>
+            <div class="framework-row">
+              <span>03</span>
+              <strong>Automatyzacja</strong>
+              <small>raport lub tracker</small>
             </div>
-            <button type="submit" class="btn-submit" id="submit-btn">Wyślij wiadomość</button>
-            <p class="form-status" id="form-status"></p>
+            <div class="framework-row">
+              <span>04</span>
+              <strong>Przekazanie</strong>
+              <small>instrukcja i kontrola</small>
+            </div>
+          </div>
+          <p>Najpierw ustalam, jaka decyzja ma być podejmowana na podstawie raportu. Dopiero potem dobieram Excel, Power Query, VBA, SQL albo prostszą zmianę procesu.</p>
+        </div>
+
+        <div class="approach">
+          <div class="step reveal"><div><h3>Diagnoza</h3><p>Mapuję obecny proces, źródła danych, punkty ręcznej pracy i miejsca, w których pojawiają się błędy.</p></div></div>
+          <div class="step reveal"><div><h3>Projekt rozwiązania</h3><p>Ustalam docelowy przepływ danych, logikę raportową, zakres automatyzacji i format wyniku.</p></div></div>
+          <div class="step reveal"><div><h3>Budowa i testy</h3><p>Tworzę raport, model, plik lub automatyzację oraz sprawdzam wynik na realnych danych.</p></div></div>
+          <div class="step reveal"><div><h3>Przekazanie</h3><p>Dokumentuję logikę, pokazuję sposób użycia i zostawiam rozwiązanie możliwe do utrzymania przez zespół.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Case studies</div>
+            <h2>Przykłady projektów, które najlepiej pokazują mój sposób pracy.</h2>
+          </div>
+          <p class="section-desc">Poniższe przykłady są zanonimizowane i opisują typowe sytuacje w controllingu, raportowaniu zarządczym i automatyzacji finansów.</p>
+        </div>
+
+        <div class="case-grid">
+          <article class="card case-card reveal">
+            <div class="case-head"><div class="case-label">Management reporting</div><h3>Automatyzacja raportu miesięcznego</h3></div>
+            <div class="case-body"><dl><div><dt>Problem</dt><dd>Raport wymagał ręcznego łączenia wielu plików i kontroli wersji.</dd></div><div><dt>Rozwiązanie</dt><dd>Model Power Query, uporządkowana struktura danych i dashboard wynikowy.</dd></div><div><dt>Efekt</dt><dd>Krótszy czas przygotowania raportu, mniej błędów i łatwiejsza analiza odchyleń.</dd></div></dl><a class="case-link" href="#project-reporting">Zobacz szczegóły</a></div>
+          </article>
+          <article class="card case-card reveal">
+            <div class="case-head"><div class="case-label">Dashboard / KPI</div><h3>Dashboard KPI dla zarządu</h3></div>
+            <div class="case-body"><dl><div><dt>Problem</dt><dd>Kluczowe wskaźniki były dostępne w różnych plikach i nie dawały jednego obrazu biznesu.</dd></div><div><dt>Rozwiązanie</dt><dd>Dashboard z widokiem na sprzedaż, marżę, koszty i trendy.</dd></div><div><dt>Efekt</dt><dd>Szybsze spotkania zarządcze i decyzje oparte na aktualnych danych.</dd></div></dl><a class="case-link" href="#project-kpi">Zobacz szczegóły</a></div>
+          </article>
+          <article class="card case-card reveal">
+            <div class="case-head"><div class="case-label">Excel / VBA / controls</div><h3>Usprawnienie pliku controllingowego</h3></div>
+            <div class="case-body"><dl><div><dt>Problem</dt><dd>Arkusz był rozbudowany, podatny na błędy i trudny do przejęcia przez inne osoby.</dd></div><div><dt>Rozwiązanie</dt><dd>Przebudowa logiki, automatyzacja VBA, walidacje i dokumentacja.</dd></div><div><dt>Efekt</dt><dd>Stabilniejszy proces i mniejsze ryzyko błędów w raportowaniu.</dd></div></dl><a class="case-link" href="#project-excel">Zobacz szczegóły</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt project-details" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Projekty w praktyce</div>
+            <h2>Od ręcznej pracy w Excelu do powtarzalnego raportowania.</h2>
+          </div>
+          <p class="section-desc">Każdy projekt zaczyna się od pytania: jaką decyzję ma wspierać raport i gdzie dziś powstaje ryzyko błędu lub strata czasu.</p>
+        </div>
+
+        <div class="project-stack">
+          <article class="project-detail reveal" id="project-reporting">
+            <div class="project-meta">01 / Reporting</div>
+            <div>
+              <h3>Automatyzacja miesięcznego raportu zarządczego</h3>
+              <p>Projekt zamienia ręczny proces raportowania w powtarzalny model oparty o Power Query lub Excel. Celem jest mniej kontroli wersji, mniej ręcznych korekt i szybsza analiza odchyleń.</p>
+              <ul>
+                <li>mapowanie źródeł danych, właścicieli i logiki raportu,</li>
+                <li>automatyczne odświeżanie danych i kontrole kompletności,</li>
+                <li>finalny raport gotowy do cyklicznego użycia przez zespół.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-detail reveal" id="project-kpi">
+            <div class="project-meta">02 / Dashboard</div>
+            <div>
+              <h3>Dashboard KPI dla właściciela lub zarządu</h3>
+              <p>Dashboard porządkuje najważniejsze wskaźniki: sprzedaż, koszty, marżę, cash flow, trendy i odchylenia. Raport ma być czytelny dla decyzji, a nie tylko poprawny technicznie.</p>
+              <ul>
+                <li>model danych i logika KPI dopasowana do biznesu,</li>
+                <li>widoki dla zarządu, managerów lub właściciela firmy,</li>
+                <li>szybsze spotkania i mniej dyskusji o tym, która wersja danych jest właściwa.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-detail reveal" id="project-excel">
+            <div class="project-meta">03 / Excel automation</div>
+            <div>
+              <h3>Usprawnienie pliku controllingowego</h3>
+              <p>Przebudowa arkusza obejmuje logikę obliczeń, walidacje, automatyzację VBA lub Power Query oraz dokumentację. Efekt ma być możliwy do utrzymania, nie zależny od jednej osoby.</p>
+              <ul>
+                <li>ograniczenie ręcznego kopiowania i wklejania danych,</li>
+                <li>walidacje braków, duplikatów i niespójnych formatów,</li>
+                <li>instrukcja obsługi i rekomendacje dalszego rozwoju pliku.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Before / After</div>
+            <h2>Efekt, którego szukam w projektach.</h2>
+          </div>
+        </div>
+        <div class="before-after">
+          <div class="ba reveal"><h3>Przed</h3><ul><li>ręczne kopiowanie danych,</li><li>wiele wersji tego samego raportu,</li><li>niejasna logika KPI,</li><li>proces trudny do przekazania innej osobie.</li></ul></div>
+          <div class="ba after reveal"><h3>Po</h3><ul><li>jedna wersja prawdy,</li><li>automatyczne odświeżanie danych,</li><li>czytelne odchylenia, koszty i marża,</li><li>dokumentacja i kontrola jakości danych.</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Kompetencje</div>
+            <h2>Kompetencje finansowe i techniczne, które łączą analizę z wykonaniem.</h2>
+          </div>
+        </div>
+
+        <div class="skills">
+          <article class="card reveal"><h3>Finance</h3><div class="skill-list"><span>Controlling finansowy</span><span>Raportowanie zarządcze</span><span>Analiza odchyleń</span><span>Budgeting</span><span>Forecasting</span><span>R2R</span><span>GL accounting</span><span>IC reconciliation</span><span>KPI reporting</span></div></article>
+          <article class="card reveal"><h3>Data</h3><div class="skill-list"><span>Power Query</span><span>Power Pivot</span><span>SQL</span><span>Modele danych</span><span>Kontrole jakości danych</span><span>Dashboardy KPI</span><span>Data analytics</span></div></article>
+          <article class="card reveal"><h3>Automation</h3><div class="skill-list"><span>Excel advanced</span><span>VBA</span><span>Automatyczne raporty</span><span>Walidacje</span><span>Trackery</span><span>Procesy cykliczne</span><span>Dokumentacja</span></div></article>
+          <article class="card reveal"><h3>Business</h3><div class="skill-list"><span>Business partnering</span><span>Prezentacja danych</span><span>Stakeholder management</span><span>Process improvement</span><span>Rekomendacje dla managementu</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+      <div class="container about">
+        <aside class="profile-stats reveal" aria-label="Profil w liczbach">
+          <div class="stat-card"><strong>9+</strong><span>lat doświadczenia w finansach</span></div>
+          <div class="stat-card"><strong>50+</strong><span>usprawnień i automatyzacji</span></div>
+          <div class="stat-card"><strong>5</strong><span>obszary: controlling, RtR, automatyzacja, raporty, konsolidacja i raportowanie</span></div>
+          <div class="stat-card"><strong>10+</strong><span>technologii: VBA, Python, SQL<span class="dot-loader" aria-hidden="true"><i></i><i></i><i></i></span></span></div>
+        </aside>
+
+        <div class="reveal">
+          <div class="section-kicker">Profil zawodowy</div>
+          <h2>Łączę perspektywę finansową z technicznym wykonaniem.</h2>
+          <div class="timeline">
+            <div class="timeline-item"><h3>Controlling i interpretacja wyniku</h3><p>Jestem kontrolerem finansowym z doświadczeniem w księgowości, R2R, controllingu i usprawnianiu procesów finansowych. Ważne są dla mnie zarówno poprawne liczby, jak i ich praktyczna interpretacja.</p></div>
+            <div class="timeline-item"><h3>Automatyzacja codziennej pracy finansów</h3><p>Pracuję z Excel, VBA, Power Query i SQL, aby skracać cykliczne raportowanie, porządkować dane i zmniejszać ryzyko błędów w plikach.</p></div>
+            <div class="timeline-item"><h3>Business partnering i komunikacja</h3><p>Raport traktuję jako narzędzie do decyzji. Dlatego zależy mi na jasnym opisie wyniku, odpowiedzialności za proces i komunikacji z managerami oraz właścicielami firm.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section offer" id="offer">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Modele współpracy</div>
+            <h2>Elastyczne wsparcie dla finansów, controllingu i raportowania.</h2>
+          </div>
+          <p class="section-desc">Mogę wesprzeć firmę jednorazowo przy konkretnym projekcie albo cyklicznie jako zewnętrzne wsparcie controllingu, raportowania lub automatyzacji.</p>
+        </div>
+
+        <div class="offer-grid">
+          <article class="card reveal"><div class="price">Projekt</div><h3>Audyt raportu lub procesu</h3><p>Przegląd obecnych plików, logiki, źródeł danych i rekomendacje, co można uprościć, skontrolować lub zautomatyzować.</p></article>
+          <article class="card reveal"><div class="price">Projekt</div><h3>Automatyzacja Excel / VBA / Power Query</h3><p>Import danych, czyszczenie, transformacja, walidacje, raport końcowy i instrukcja użytkowania.</p></article>
+          <article class="card reveal"><div class="price">Projekt</div><h3>Dashboard / raport zarządczy</h3><p>Model danych, KPI, widoki dla zarządu, raporty sprzedaży, kosztów, marży, cash flow i odchyleń.</p></article>
+          <article class="card reveal"><div class="price">Cyklicznie</div><h3>Controlling na godziny</h3><p>Regularna pomoc przy raportowaniu, analizach, zamknięciu miesiąca, KPI, budżetowaniu, forecastach i rozwoju narzędzi.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt local-section" id="local">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Lokalnie i zdalnie</div>
+            <h2>Usługi dla firm z Poznania, Grodziska Wielkopolskiego i okolic.</h2>
+          </div>
+          <p class="section-desc">Pracuję zdalnie oraz lokalnie. Przy projektach finansowych najważniejsze są dobry dostęp do danych, jasny cel raportowania i sprawna komunikacja, dlatego większość prac można prowadzić bez stałej obecności na miejscu.</p>
+        </div>
+
+        <div class="local-grid reveal">
+          <div>
+            <h3>Start od diagnozy</h3>
+            <p>Na początku ustalamy, jaki raport, plik lub proces blokuje zespół i jaka decyzja ma być wspierana przez dane.</p>
+          </div>
+          <div>
+            <h3>Zdalna realizacja</h3>
+            <p>Raportowanie, dashboardy, Excel, Power Query, VBA i konsultacje procesowe mogą być prowadzone w pełni zdalnie.</p>
+          </div>
+          <div>
+            <h3>Spotkanie, gdy ma sens</h3>
+            <p>Jeśli projekt wymaga warsztatu, omówienia procesu lub pracy z zespołem, możemy zaplanować spotkanie lokalne.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">FAQ</div>
+            <h2>Najczęstsze pytania o współpracę.</h2>
+          </div>
+        </div>
+
+        <div class="faq-grid">
+          <article class="card reveal"><h3>Czy oferuję controlling na godziny?</h3><p>Tak. Mogę wesprzeć firmę projektowo, godzinowo lub cyklicznie w raportowaniu zarządczym, analizie kosztów, budżetowaniu, forecastach i automatyzacji finansów.</p></article>
+          <article class="card reveal"><h3>Czy mogę zacząć od audytu obecnego raportu?</h3><p>Tak. Najpierw mogę przejrzeć obecny plik, źródła danych, ręczne kroki, ryzyka błędów i zaproponować prostszy sposób pracy.</p></article>
+          <article class="card reveal"><h3>Czy mogę uporządkować istniejący plik Excel?</h3><p>Tak. Mogę przeanalizować obecną logikę, źródła danych, ryzyka błędów, a następnie zaproponować przebudowę, automatyzację lub dokumentację.</p></article>
+          <article class="card reveal"><h3>Czy tworzę dashboardy i raporty KPI?</h3><p>Tak. Buduję modele danych, dashboardy i raporty dla finansów, sprzedaży, kosztów, marży, cash flow oraz raportowania zarządczego.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-panel reveal">
+        <div>
+          <div class="section-kicker">Kontakt</div>
+          <h2>Porozmawiajmy o roli, raporcie albo automatyzacji.</h2>
+          <p>Wyślij krótki opis obecnego procesu, pliku lub potrzeby rekrutacyjnej. Odpowiem, czy widzę przestrzeń do współpracy, automatyzacji, uproszczenia lub lepszego raportowania.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary light" href="mailto:filiplodyga@gmail.com">Napisz maila</a>
+            <a class="btn btn-secondary dark" href="https://www.linkedin.com/in/filip-lodyga/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+          <address class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:filiplodyga@gmail.com">filiplodyga@gmail.com</a></p>
+            <p><strong>Telefon:</strong> <a href="tel:+48531354330">+48 531 354 330</a></p>
+            <p><strong>Lokalizacja:</strong> Grodzisk Wielkopolski / zdalnie</p>
+          </address>
+        </div>
+        <form id="contact-form" class="contact-form" novalidate>
+          <input type="hidden" name="access_key" value="4f78f796-d6fa-4b5a-a835-94e20a404b14">
+          <input type="hidden" name="subject" value="Nowa wiadomość z flodyga.pl">
+          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+
+          <div class="form-group">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="jan@firma.pl">
+          </div>
+          <div class="form-group">
+            <label for="topic">Typ kontaktu</label>
+            <select id="topic" name="topic" required>
+              <option value="">Wybierz temat</option>
+              <option>Rekrutacja / CV</option>
+              <option>Projekt freelance</option>
+              <option>Audyt raportu lub pliku</option>
+              <option>Dashboard / Excel / automatyzacja</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Wiadomość</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Opisz krótko rolę, raport, plik lub proces, który chcesz usprawnić."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary light form-submit" id="submit-btn">Wyślij opis</button>
+          <p class="form-note">Nie potrzebuję gotowej specyfikacji. Wystarczy krótki opis problemu albo celu.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Filip Łodyga. Kontroler finansowy, controlling i automatyzacja raportowania.</span>
+      <span>Poznań · Grodzisk Wielkopolski · Wielkopolska · Zdalnie</span>
     </div>
-</section>
+  </footer>
 
-<footer>
-    <p>© 2026 Filip Łodyga — Kontroler Finansowy · Grodzisk Wielkopolski</p>
-</footer>
-
-<a href="#" class="back-to-top" id="back-to-top" aria-label="Wróć na górę">↑</a>
-
-<script>
-// ─── Mobile nav ────────────────────────────────────────────────────────────
-const toggle = document.getElementById('nav-toggle');
-const menu   = document.getElementById('nav-menu');
-toggle.addEventListener('click', () => menu.classList.toggle('open'));
-menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => menu.classList.remove('open')));
-
-// ─── Back to top ───────────────────────────────────────────────────────────
-const backBtn = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => backBtn.classList.toggle('visible', window.scrollY > 400));
-
-// ─── Fade-in ───────────────────────────────────────────────────────────────
-const fadeObs = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add('visible'), i * 80);
-            fadeObs.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.12 });
-document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
-
-// ─── Scroll spy ────────────────────────────────────────────────────────────
-const navLinks = document.querySelectorAll('.menu a[href^="#"]');
-const spyObs   = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            navLinks.forEach(a => a.classList.remove('active'));
-            const a = document.querySelector(`.menu a[href="#${entry.target.id}"]`);
-            if (a) a.classList.add('active');
-        }
-    });
-}, { rootMargin: '-40% 0px -55% 0px' });
-document.querySelectorAll('section[id]').forEach(s => spyObs.observe(s));
-
-// ─── Typewriter ────────────────────────────────────────────────────────────
-const words = ['Automation', 'Analytics', 'Insights', 'AI'];
-let wi = 0, ci = 0, del = false, paused = false;
-const tel = document.getElementById('typed-word');
-function type() {
-    if (paused) return;
-    const w = words[wi];
-    tel.textContent = del ? w.substring(0, ci - 1) : w.substring(0, ci + 1);
-    del ? ci-- : ci++;
-    if (!del && ci === w.length) { paused = true; setTimeout(() => { del = true; paused = false; type(); }, 2200); return; }
-    if (del && ci === 0) { del = false; wi = (wi + 1) % words.length; }
-    setTimeout(type, del ? 70 : 115);
-}
-setTimeout(type, 900);
-
-// ─── Animated counters ─────────────────────────────────────────────────────
-function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
-const cntObs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target, target = +el.dataset.target, t0 = performance.now();
-        (function run(now) {
-            const p = Math.min((now - t0) / 1600, 1);
-            el.textContent = Math.floor(easeOutQuart(p) * target);
-            p < 1 ? requestAnimationFrame(run) : (el.textContent = target);
-        })(t0);
-        cntObs.unobserve(el);
-    });
-}, { threshold: 0.6 });
-document.querySelectorAll('.stat-num').forEach(c => cntObs.observe(c));
-
-// ─── Carousel ──────────────────────────────────────────────────────────────
-const track     = document.getElementById('carousel-track');
-const dotsWrap  = document.getElementById('carousel-dots');
-let idx = 0;
-
-function visCount() {
-    return window.innerWidth < 540 ? 1 : window.innerWidth < 900 ? 2 : 4;
-}
-function cards() { return Array.from(track.querySelectorAll('.value-card')); }
-
-function step() {
-    const vp  = document.querySelector('.carousel-viewport');
-    const gap = 16;
-    const vis = visCount();
-    const cw  = (vp.offsetWidth - gap * (vis - 1)) / vis;
-    return { cw, s: cw + gap };
-}
-
-function renderDots() {
-    const max = cards().length - visCount();
-    dotsWrap.innerHTML = '';
-    for (let i = 0; i <= max; i++) {
-        const d = document.createElement('span');
-        d.className = 'dot' + (i === idx ? ' active' : '');
-        d.onclick = () => { idx = i; move(true); };
-        dotsWrap.appendChild(d);
-    }
-}
-
-function move(animate) {
-    const { cw, s } = step();
-    cards().forEach(c => { c.style.width = cw + 'px'; c.style.flexShrink = '0'; });
-    track.style.transition = animate ? 'transform 0.44s cubic-bezier(0.4,0,0.2,1)' : 'none';
-    track.style.transform  = `translateX(-${idx * s}px)`;
-    if (!animate) track.offsetHeight;
-    renderDots();
-}
-
-document.getElementById('carousel-prev').onclick = () => {
-    const max = cards().length - visCount();
-    idx = idx <= 0 ? max : idx - 1; move(true);
-};
-document.getElementById('carousel-next').onclick = () => {
-    const max = cards().length - visCount();
-    idx = idx >= max ? 0 : idx + 1; move(true);
-};
-
-// Swipe
-let tx = 0;
-track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
-track.addEventListener('touchend',   e => {
-    const d = tx - e.changedTouches[0].clientX;
-    if (Math.abs(d) > 40) {
-        const max = cards().length - visCount();
-        idx = d > 0 ? (idx >= max ? 0 : idx + 1) : (idx <= 0 ? max : idx - 1);
-        move(true);
-    }
-});
-
-// Init + resize
-move(false);
-let rt;
-window.addEventListener('resize', () => {
-    clearTimeout(rt);
-    rt = setTimeout(() => { idx = Math.min(idx, cards().length - visCount()); move(false); }, 120);
-});
-
-// ─── Contact form ───────────────────────────────────────────────────────────
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    const sts = document.getElementById('form-status');
-    btn.disabled = true; btn.textContent = 'Wysyłanie…';
-    sts.className = 'form-status'; sts.textContent = '';
-    try {
-        const res  = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(Object.fromEntries(new FormData(e.target)))
-        });
-        const data = await res.json();
-        if (data.success) {
-            sts.textContent = '✓ Wiadomość wysłana! Odezwę się wkrótce.';
-            sts.className = 'form-status success';
-            e.target.reset();
-        } else throw new Error(data.message || 'Nieznany błąd API');
-    } catch (err) {
-        sts.textContent = `✗ Błąd: ${err.message}. Napisz bezpośrednio na filiplodyga@gmail.com`;
-        sts.className = 'form-status error';
-        console.error('Web3Forms error:', err);
-    } finally {
-        btn.disabled = false; btn.textContent = 'Wyślij wiadomość';
-    }
-});
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>

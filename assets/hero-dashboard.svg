@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="720" viewBox="0 0 760 720" fill="none">
+  <defs>
+    <linearGradient id="shell" x1="94" y1="72" x2="666" y2="656" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#EFE7D8"/>
+    </linearGradient>
+    <linearGradient id="nav" x1="111" y1="86" x2="648" y2="143" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1F3A"/>
+      <stop offset="1" stop-color="#102A4D"/>
+    </linearGradient>
+    <linearGradient id="goldLine" x1="142" y1="573" x2="622" y2="452" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1F3A"/>
+      <stop offset=".58" stop-color="#B08D57"/>
+      <stop offset="1" stop-color="#D7C29A"/>
+    </linearGradient>
+    <filter id="shadow" x="42" y="34" width="690" height="650" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="30" stdDeviation="35" flood-color="#0B1F3A" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <rect x="75" y="66" width="610" height="586" rx="42" fill="url(#shell)" stroke="#D8D2C4" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="98" y="90" width="564" height="78" rx="28" fill="url(#nav)"/>
+  <rect x="128" y="118" width="132" height="16" rx="8" fill="#FFFDF8" opacity=".94"/>
+  <rect x="128" y="143" width="214" height="9" rx="4.5" fill="#D7C29A" opacity=".72"/>
+  <rect x="513" y="115" width="42" height="12" rx="6" fill="#FFFDF8" opacity=".72"/>
+  <rect x="568" y="115" width="42" height="12" rx="6" fill="#FFFDF8" opacity=".72"/>
+  <rect x="513" y="139" width="97" height="10" rx="5" fill="#D7C29A" opacity=".42"/>
+
+  <g>
+    <rect x="118" y="198" width="150" height="112" rx="22" fill="#FFFDF8" stroke="#D8D2C4"/>
+    <text x="140" y="232" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#667085">Revenue</text>
+    <text x="140" y="270" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">12.4M</text>
+    <text x="140" y="294" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#B08D57">+8.2% vs plan</text>
+
+    <rect x="305" y="198" width="150" height="112" rx="22" fill="#FFFDF8" stroke="#D8D2C4"/>
+    <text x="327" y="232" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#667085">Margin</text>
+    <text x="327" y="270" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">31.8%</text>
+    <text x="327" y="294" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#B08D57">+1.4 pp</text>
+
+    <rect x="492" y="198" width="150" height="112" rx="22" fill="#FFFDF8" stroke="#D8D2C4"/>
+    <text x="514" y="232" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#667085">Cash Flow</text>
+    <text x="514" y="270" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">2.1M</text>
+    <text x="514" y="294" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#B08D57">forecast</text>
+  </g>
+
+  <rect x="118" y="338" width="332" height="236" rx="26" fill="#FFFDF8" stroke="#D8D2C4"/>
+  <text x="145" y="377" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#0B1F3A">Monthly performance</text>
+  <text x="145" y="402" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#667085">Actual vs budget trend</text>
+  <line x1="145" y1="528" x2="420" y2="528" stroke="#D8D2C4"/>
+  <line x1="145" y1="484" x2="420" y2="484" stroke="#D8D2C4" stroke-dasharray="5 8"/>
+  <line x1="145" y1="440" x2="420" y2="440" stroke="#D8D2C4" stroke-dasharray="5 8"/>
+  <path d="M147 510 C180 486 202 500 230 464 C266 417 295 474 326 438 C357 402 380 435 419 410" stroke="#B08D57" stroke-width="7" stroke-linecap="round"/>
+  <path d="M147 526 C184 512 207 524 238 496 C276 462 302 510 332 478 C363 445 385 468 419 444" stroke="#0B1F3A" stroke-width="4" stroke-linecap="round" opacity=".72"/>
+  <circle cx="419" cy="410" r="7" fill="#B08D57" stroke="#FFFDF8" stroke-width="4"/>
+  <rect x="145" y="546" width="40" height="8" rx="4" fill="#0B1F3A" opacity=".76"/>
+  <rect x="198" y="546" width="40" height="8" rx="4" fill="#B08D57" opacity=".76"/>
+
+  <rect x="476" y="338" width="166" height="236" rx="26" fill="#FFFDF8" stroke="#D8D2C4"/>
+  <text x="503" y="377" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#0B1F3A">Exceptions</text>
+  <text x="503" y="402" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#667085">Items to review</text>
+  <g>
+    <rect x="503" y="430" width="112" height="11" rx="5.5" fill="#0B1F3A" opacity=".84"/>
+    <rect x="503" y="453" width="82" height="8" rx="4" fill="#667085" opacity=".42"/>
+    <circle cx="612" cy="454" r="13" fill="#D7C29A" opacity=".38"/>
+  </g>
+  <g>
+    <rect x="503" y="487" width="92" height="11" rx="5.5" fill="#0B1F3A" opacity=".74"/>
+    <rect x="503" y="510" width="103" height="8" rx="4" fill="#667085" opacity=".42"/>
+    <circle cx="612" cy="511" r="13" fill="#B08D57" opacity=".28"/>
+  </g>
+  <g>
+    <rect x="503" y="544" width="104" height="11" rx="5.5" fill="#0B1F3A" opacity=".64"/>
+    <rect x="503" y="567" width="70" height="8" rx="4" fill="#667085" opacity=".42"/>
+  </g>
+
+  <rect x="118" y="598" width="524" height="28" rx="14" fill="#0B1F3A" opacity=".08"/>
+  <rect x="118" y="598" width="354" height="28" rx="14" fill="#B08D57" opacity=".32"/>
+  <text x="140" y="617" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#0B1F3A">Single source of truth</text>
+</svg>
