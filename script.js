@@ -83,7 +83,7 @@ const textTranslations = {
     'Skontaktuj się': 'Contact me',
     'Controlling &': 'Controlling &',
     'Controlling, który daje decyzje. Automatyzacja, która oszczędza czas.': 'Controlling that supports decisions. Automation that saves time.',
-    'Pomagam firmom porządkować raportowanie zarządcze, automatyzować Excel oraz szybciej rozumieć koszty, marżę, cash flow i KPI.': 'I help companies organize management reporting, automate Excel workflows, and understand costs, margin, cash flow and KPIs faster.',
+    'Pomagam firmom uporządkować raportowanie finansowe, zautomatyzować pracę w Excelu i szybciej widzieć, co dzieje się z kosztami, marżą, cash flow i KPI.': 'I help companies organize financial reporting, automate Excel work and see what is happening with costs, margin, cash flow and KPIs faster.',
     'Porozmawiajmy o Twoim raporcie': 'Let’s talk about your report',
     'Dla rekrutera i dla firmy': 'For recruiters and businesses',
     'Controlling finansowy': 'Financial controlling',
@@ -111,14 +111,14 @@ const textTranslations = {
     'cykliczne wsparcie przy KPI, kosztach, marży, budżecie i forecastach.': 'recurring support with KPIs, costs, margin, budgeting and forecasts.',
     'Opisz proces do usprawnienia': 'Describe the process to improve',
     'W czym mogę pomóc': 'How I can help',
-    'Controlling finansowy, raportowanie zarządcze i automatyzacja danych.': 'Financial controlling, management reporting and data automation.',
-    'Największą wartość wnoszę tam, gdzie finanse, operacje i dane spotykają się w praktyce: w raportach miesięcznych, budżetach, Excelu, dashboardach i procesach zamknięcia.': 'I add the most value where finance, operations and data meet in practice: monthly reports, budgets, Excel files, dashboards and closing processes.',
+    'Automatyzacja raportów, analiza danych i dashboardy dla finansów.': 'Report automation, data analysis and dashboards for finance.',
+    'Wspieram controlling i kontrolling finansowy: raporty zarządcze, analizę kosztów, marży, KPI oraz automatyzację cyklicznych raportów w Excelu, VBA, Power Query i SQL.': 'I support financial controlling: management reports, cost, margin and KPI analysis, plus recurring report automation in Excel, VBA, Power Query and SQL.',
     'Raportowanie zarządcze i controlling': 'Management reporting and controlling',
     'Raporty miesięczne, analiza kosztów, przychodów i marż, budżet vs actual, KPI finansowe i komentarze do business review.': 'Monthly reports, cost, revenue and margin analysis, budget vs actual, financial KPIs and comments for business reviews.',
     'Automatyzacja Excel, VBA i Power Query': 'Excel, VBA and Power Query automation',
-    'Automatyczne raporty, importy, walidacje, czyszczenie danych, makra i przebudowa arkuszy, które dziś wymagają ręcznego kopiowania.': 'Automated reports, imports, validations, data cleaning, macros and rebuilding spreadsheets that currently require manual copying.',
+    'Automatyzacja raportów Excel: importy, walidacje, czyszczenie danych, makra i przebudowa arkuszy, które dziś wymagają ręcznego kopiowania.': 'Excel report automation: imports, validations, data cleaning, macros and rebuilding spreadsheets that currently require manual copying.',
     'Dashboardy i raporty finansowe': 'Financial dashboards and reports',
-    'Modele danych, dashboardy KPI, widoki dla zarządu i managerów oraz raporty sprzedaży, kosztów, rentowności i cash flow.': 'Data models, KPI dashboards, views for management and reports for sales, costs, profitability and cash flow.',
+    'Modele danych, dashboardy KPI, widoki dla zarządu i managerów oraz raporty sprzedaży, kosztów, rentowności, marży i cash flow.': 'Data models, KPI dashboards, views for management and reports for sales, costs, profitability, margin and cash flow.',
     'Budżetowanie, forecast i analiza odchyleń': 'Budgeting, forecasting and variance analysis',
     'Wsparcie przy planowaniu, kontroli wykonania, analizie różnic, scenariuszach i prezentacji wniosków dla właściciela lub managementu.': 'Support with planning, performance tracking, variance analysis, scenarios and presenting conclusions to owners or management.',
     'R2R, uzgodnienia i IC reconciliation': 'R2R, reconciliations and IC reconciliation',
@@ -306,7 +306,7 @@ const attrTranslations = {
     'Wybór języka': 'Language selection',
     'Polska wersja językowa': 'Polish language version',
     'Specjalizacje': 'Specializations',
-    'Mockup dashboardu finansowego': 'Financial dashboard mockup',
+    'Dashboard finansowy KPI do raportowania zarządczego i analizy danych': 'Financial KPI dashboard for management reporting and data analysis',
     'Framework pracy': 'Work framework',
     'Profil w liczbach': 'Profile in numbers',
     'Jan Kowalski': 'John Smith',
@@ -317,18 +317,18 @@ const attrTranslations = {
 
 const languageMeta = {
   pl: {
-    title: 'Kontroler finansowy Poznań | Controlling, Excel, dashboardy - Filip Łodyga',
-    description: 'Kontroler finansowy i specjalista controllingu. Pomagam firmom z Poznania, Grodziska Wielkopolskiego i Wielkopolski w raportowaniu zarządczym, automatyzacji Excel, analizie kosztów i usprawnianiu procesów finansowych.',
-    keywords: 'kontroler finansowy Poznań, controlling Poznań, controlling na godziny, raportowanie zarządcze, automatyzacja Excel, dashboardy Excel, Excel VBA Poznań, Power Query, Grodzisk Wielkopolski, Wielkopolska',
-    ogTitle: 'Filip Łodyga | Kontroler finansowy, controlling i automatyzacja raportowania',
-    ogDescription: 'Raportowanie zarządcze, controlling na godziny, Excel, dashboardy i automatyzacja finansów dla firm z Poznania, Grodziska Wielkopolskiego i Wielkopolski.'
+    title: 'Kontroler finansowy Poznań | Controlling, Excel, raporty',
+    description: 'Kontroler finansowy z Wielkopolski. Controlling, kontrolling, Excel, VBA, SQL, dashboardy, automatyzacja raportów i raporty zarządcze dla firm.',
+    keywords: 'kontroler finansowy Poznań, controlling Poznań, kontrolling, controlling na godziny, raportowanie zarządcze, automatyzacja raportów Excel, dashboardy Excel, Excel VBA, SQL, analiza danych, Power Query, Grodzisk Wielkopolski, Wielkopolska',
+    ogTitle: 'Filip Łodyga | Controlling, Excel i automatyzacja raportów',
+    ogDescription: 'Kontroler finansowy: raporty zarządcze, dashboardy, Excel, VBA, SQL, analiza danych i automatyzacja raportów dla firm.'
   },
   en: {
-    title: 'Financial Controller | Controlling, Excel, dashboards - Filip Łodyga',
-    description: 'Financial controller and controlling specialist. I help companies organize management reporting, automate Excel, analyze costs and improve finance processes.',
-    keywords: 'financial controller, controlling, hourly controlling, management reporting, Excel automation, VBA, Power Query, dashboards, finance process automation, freelance controller',
-    ogTitle: 'Filip Łodyga | Financial controller, controlling and reporting automation',
-    ogDescription: 'Management reporting, hourly controlling support, Excel, dashboards and finance automation for companies.'
+    title: 'Financial Controller | Controlling, Excel, reports',
+    description: 'Financial controller from Poland. Controlling, Excel, VBA, SQL, dashboards, report automation and management reporting for companies.',
+    keywords: 'financial controller, controlling, hourly controlling, management reporting, Excel report automation, VBA, SQL, Power Query, dashboards, data analysis, freelance controller',
+    ogTitle: 'Filip Łodyga | Controlling, Excel and report automation',
+    ogDescription: 'Financial controller: management reports, dashboards, Excel, VBA, SQL, data analysis and report automation for companies.'
   }
 };
 
@@ -398,6 +398,8 @@ function applyLanguage(lang) {
   setMetaContent('meta[name="keywords"]', meta.keywords);
   setMetaContent('meta[property="og:title"]', meta.ogTitle);
   setMetaContent('meta[property="og:description"]', meta.ogDescription);
+  setMetaContent('meta[name="twitter:title"]', meta.ogTitle);
+  setMetaContent('meta[name="twitter:description"]', meta.ogDescription);
 
   const subject = document.querySelector('input[name="subject"]');
   if (subject) {
