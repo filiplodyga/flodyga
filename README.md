@@ -6,7 +6,8 @@ Statyczna strona personalna w stylu premium consulting / finance.
 - `index.html` — struktura strony
 - `styles.css` — layout, responsywność, animacje, paleta kolorów
 - `script.js` — animacje przy scrollu i menu mobilne
-- `assets/favicon.ico` — aktualne logo / favicon
+- `assets/lodyga-logo.png` — logotyp w headerze
+- `assets/favicon.ico`, `assets/favicon-*.png`, `assets/apple-touch-icon.png` — favicon na bazie monogramu
 - `assets/hero-dashboard.svg` — grafika hero / mockup dashboardu
 - `assets/og-image.svg` — grafika do podglądu social media
 

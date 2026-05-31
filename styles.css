@@ -38,8 +38,8 @@ a{color:inherit;text-decoration:none}
 .container{width:min(1160px,calc(100% - 40px));margin-inline:auto}
 .nav{position:sticky;top:0;z-index:20;background:rgba(247,244,238,.84);backdrop-filter:blur(18px);border-bottom:1px solid rgba(216,210,196,.7)}
 .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em;color:var(--navy)}
-.brand-logo{width:38px;height:38px;border-radius:12px;object-fit:contain}
+.brand{display:flex;align-items:center;min-width:150px;color:var(--navy)}
+.brand-logo{width:168px;height:auto;max-height:50px;display:block;object-fit:contain}
 .nav-links{display:flex;align-items:center;gap:22px;font-size:14px;color:var(--slate)}
 .nav-links a{opacity:.82}.nav-links a:hover{opacity:1;color:var(--gold)}
 .language-switch{display:flex;align-items:center;gap:6px;padding:4px;border:1px solid var(--border);border-radius:999px;background:rgba(255,253,248,.62)}
@@ -194,6 +194,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5.8vw,66px);max-wid
   .nav-links.open{display:flex}
   .nav-cta{display:none}
   .language-switch{margin-left:auto}
+  .brand-logo{width:150px}
 }
 @media(max-width:620px){
   .container{width:min(100% - 28px,1160px)}
@@ -201,7 +202,8 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5.8vw,66px);max-wid
   .cards,.offer-grid,.audience-grid,.local-grid,.faq-grid{grid-template-columns:1fr}
   .footer-inner{display:block}
   .btn{width:100%}
-  .brand span:last-child{display:none}
+  .brand{min-width:118px}
+  .brand-logo{width:126px}
   .contact-panel{padding:24px}
   .typing-line span{min-width:108px}
 }
