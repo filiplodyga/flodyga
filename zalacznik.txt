@@ -1,1 +1,0 @@
-To jest przykładowy plik tekstowy. Docelowo w tym miejscu będą pliki .xlsm/.xlsx.
